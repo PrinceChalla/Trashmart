@@ -1,0 +1,323 @@
+[gd_scene load_steps=4 format=3 uid="uid://cx0i3a20ncpaa"]
+
+[ext_resource type="Script" path="res://buyers_list.gd" id="1_ecwyu"]
+[ext_resource type="Texture2D" uid="uid://b4s7dadi0rrkq" path="res://assets/nature.jpg" id="1_mifkc"]
+[ext_resource type="PackedScene" uid="uid://bmjdr6cb6hknx" path="res://v_box_container.tscn" id="2_a0y0k"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ecwyu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mifkc")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+alignment = 2
+
+[node name="Search_Button" type="Button" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Search"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 118.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 0
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Item" type="TabBar" parent="MarginContainer/TabContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Item"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/Item/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/Item/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Item/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Plastics"
+
+[node name="Plastics_CheckBox" type="CheckBox" parent="MarginContainer/TabContainer/Item/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/TabContainer/Item/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Item/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Paper"
+
+[node name="Paper_CheckBox" type="CheckBox" parent="MarginContainer/TabContainer/Item/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/TabContainer/Item/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Item/MarginContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Metal Scraps"
+
+[node name="Metal_Scraps_CheckBox" type="CheckBox" parent="MarginContainer/TabContainer/Item/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+
+[node name="Location" type="TabBar" parent="MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Location"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/Location/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" parent="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer" instance=ExtResource("2_a0y0k")]
+layout_mode = 2
+
+[node name="Ratings" type="TabBar" parent="MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Ratings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/Ratings/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "80% - 100%"
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "60% - 80%"
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "40% - 60%"
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer/HBoxContainer4"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "20% - 40%"
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer/HBoxContainer5"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "0% - 20%"
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/TabContainer/Ratings/MarginContainer/VBoxContainer/HBoxContainer5"]
+layout_mode = 2
+
+[node name="Status" type="TabBar" parent="MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/TabContainer/Status"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/Status/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/Status/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Status/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "BUYER"
+
+[node name="Buyer_CheckBox" type="CheckBox" parent="MarginContainer/TabContainer/Status/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/TabContainer/Status/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/Status/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "SELLER"
+
+[node name="Seller_CheckBox" type="CheckBox" parent="MarginContainer/TabContainer/Status/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -600.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer3"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1000
+alignment = 1
+
+[node name="Button" type="Button" parent="MarginContainer3/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Main Menu"
+
+[node name="Button2" type="Button" parent="MarginContainer3/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Back"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Search_Button" to="." method="_on_search_button_pressed"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Item/MarginContainer/VBoxContainer/HBoxContainer/Plastics_CheckBox" to="." method="_on_plastics_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Item/MarginContainer/VBoxContainer/HBoxContainer2/Paper_CheckBox" to="." method="_on_paper_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Item/MarginContainer/VBoxContainer/HBoxContainer3/Metal_Scraps_CheckBox" to="." method="_on_metal_scraps_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer/Abia_CheckBox" to="." method="_on_abia_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer2/Adamawa_CheckBox" to="." method="_on_adamawa_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer3/Akwa_ibom_CheckBox" to="." method="_on_akwa_ibom_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer4/Anambra_CheckBox" to="." method="_on_anambra_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer5/Bauchi_CheckBox" to="." method="_on_bauchi_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer6/Bayelsa_CheckBox" to="." method="_on_bayelsa_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer7/Benue_CheckBox" to="." method="_on_benue_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer8/Borno_CheckBox" to="." method="_on_borno_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer9/Cross_River_CheckBox" to="." method="_on_cross_river_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer10/Delta_CheckBox" to="." method="_on_delta_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer11/Ebonyi_CheckBox" to="." method="_on_ebonyi_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer12/Edo_CheckBox" to="." method="_on_edo_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer13/Ekiti_CheckBox" to="." method="_on_ekiti_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer14/Enugu_CheckBox" to="." method="_on_enugu_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer15/FCT_Abuja_CheckBox" to="." method="_on_fct_abuja_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer16/Gombe_CheckBox" to="." method="_on_gombe_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer17/Imo_CheckBox" to="." method="_on_imo_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer18/Jigawa_CheckBox" to="." method="_on_jigawa_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer19/Kaduna_CheckBox" to="." method="_on_kaduna_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer20/Kano_CheckBox" to="." method="_on_kano_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer21/Katsina_CheckBox" to="." method="_on_katsina_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer22/Kebbi_CheckBox" to="." method="_on_kebbi_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer23/Kogi_CheckBox" to="." method="_on_kogi_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer24/Kwara_CheckBox" to="." method="_on_kwara_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer25/Lagos_CheckBox" to="." method="_on_lagos_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer26/Nasarawa_CheckBox" to="." method="_on_nasarawa_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer27/Niger_CheckBox" to="." method="_on_niger_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer28/Ogun_CheckBox" to="." method="_on_ogun_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer29/Ondo_CheckBox" to="." method="_on_ondo_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer30/Osun_CheckBox" to="." method="_on_osun_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer31/Oyo_CheckBox" to="." method="_on_oyo_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer32/Plateau_CheckBox" to="." method="_on_plateau_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer33/Rivers_CheckBox" to="." method="_on_rivers_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer34/Sokoto_CheckBox" to="." method="_on_sokoto_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer35/Taraba_CheckBox" to="." method="_on_taraba_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer36/Yobe_CheckBox" to="." method="_on_yobe_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer37/Zamfara_CheckBox" to="." method="_on_zamfara_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer38/Overseas_CheckBox" to="." method="_on_overseas_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Status/MarginContainer/VBoxContainer/HBoxContainer/Buyer_CheckBox" to="." method="_on_buyer_check_box_toggled"]
+[connection signal="toggled" from="MarginContainer/TabContainer/Status/MarginContainer/VBoxContainer/HBoxContainer2/Seller_CheckBox" to="." method="_on_seller_check_box_toggled"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer3/VBoxContainer/HBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+
+[editable path="MarginContainer/TabContainer/Location/MarginContainer/ScrollContainer/VBoxContainer"]

@@ -1,0 +1,145 @@
+[gd_scene load_steps=3 format=3 uid="uid://cycjhre3xqxu6"]
+
+[ext_resource type="Script" path="res://terms_and_conditions.gd" id="1_oqodi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l6git"]
+bg_color = Color(0.0941176, 0.0941176, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oqodi")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_l6git")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 200
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "TO ACCOUNTS"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "MAIN MENU"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "
+Terms and Conditions
+
+Effective Date: [02-09-2024]
+
+Welcome to TRASHMART. These Terms and Conditions (\"Terms\") govern your access to and use of our website -Link in Correspondence page-, services, and products.
+ By accessing or using our services, you agree to comply with and be bound by these Terms. 
+If you do not agree to these Terms, you must not use our services.
+
+We reserve the right to modify these Terms at any time. 
+Changes will be effective immediately upon posting on our website. 
+Your continued use of our services after such changes constitutes your acceptance of the new Terms.
+
+ Use of Services
+
+You agree to use our services only for lawful purposes and in accordance with these Terms. Specifically, you agree not to:
+- Violate any local, state, or national laws.
+- Transmit any harmful or malicious code.
+- Attempt to gain unauthorized access to our systems.
+
+ User Accounts
+
+To access certain features, you may need to create an account. 
+You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.
+
+ Intellectual Property
+
+All content and materials available through our services are the property of CelestialCode Studios or our licensors and are protected by intellectual property laws.
+ You may not use, reproduce, or distribute our content without our express written consent.
+
+ Privacy Policy
+
+Your use of our services is also governed by our Privacy Policy, which explains how we collect, use, and protect your personal information. 
+Please review our Privacy Policy (On the Correspondence page)
+
+Limitation of Liability
+
+To the fullest extent permitted by law, CelestialCode Studios is not liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our services.
+
+Termination
+
+We reserve the right to terminate or suspend your access to our services at our discretion,
+ without prior notice or liability, if you breach these Terms or engage in illegal activities.
+
+ Governing Law
+
+These Terms are governed by and construed in accordance with the laws of NIGERIA.
+ Any disputes arising under these Terms will be resolved in the courts located in NIGERIA.
+
+Contact Information
+
+For any questions or concerns regarding these Terms, please contact us at:
+
+CelestialCode Studios  
+Address : None (For now)  
+kamsiosuachalla@gmail.com  
+07013884383
+"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "I have read and agree to all the terms and conditions stated above"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/HBoxContainer2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer/HBoxContainer2/CheckBox" to="." method="_on_check_box_toggled"]

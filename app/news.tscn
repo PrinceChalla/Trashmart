@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv38xsncesdm"]
+
+[ext_resource type="Script" path="res://news.gd" id="1_11ybu"]
+
+[node name="news" type="VBoxContainer"]
+theme_override_constants/separation = 20
+script = ExtResource("1_11ybu")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="counter" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "1"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+text = "rvefv"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Body" type="Label" parent="HBoxContainer3"]
+layout_mode = 2
+text = "f vev"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer4"]
+layout_mode = 2
+text = "-----------------------------------------"

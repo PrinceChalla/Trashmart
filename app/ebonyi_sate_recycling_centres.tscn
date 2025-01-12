@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c3j0hnge1gf0q"]
+
+[node name="Abia_sate_recycling_centres" type="VBoxContainer"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Recycling Centres in Ebonyi"
+
+[node name="Label2" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Ebonyi State Environmental Protection Agency (ESEPA) Recycling Centre"
+
+[node name="Label3" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "----------------------------------------"

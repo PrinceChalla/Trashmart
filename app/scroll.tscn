@@ -1,0 +1,93 @@
+[gd_scene load_steps=3 format=3 uid="uid://c08233ngyj7xw"]
+
+[ext_resource type="Script" path="res://answers.gd" id="1_pp55d"]
+
+[sub_resource type="SystemFont" id="SystemFont_tduoq"]
+subpixel_positioning = 0
+
+[node name="Scroll" type="VBoxContainer"]
+theme_override_constants/separation = 20
+script = ExtResource("1_pp55d")
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="counter" type="Label" parent="HBoxContainer8"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "USERNAME : "
+
+[node name="Username" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_tduoq")
+text = "Kamsi"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "CONTACT INFO :"
+
+[node name="Contact" type="Label" parent="HBoxContainer2"]
+layout_mode = 2
+text = "07013884383"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="HBoxContainer3"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "EMAIL ADDRESS : "
+
+[node name="Email" type="Label" parent="HBoxContainer3"]
+layout_mode = 2
+text = "kamsiosuachalla@gmail.com"
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer5"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "SYNOPSIS : "
+
+[node name="Synopsis" type="Label" parent="HBoxContainer5"]
+layout_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer6"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "BUYER :"
+
+[node name="Buyer" type="Label" parent="HBoxContainer6"]
+layout_mode = 2
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer7"]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+text = "SELLER :"
+
+[node name="Seller" type="Label" parent="HBoxContainer7"]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer4"]
+layout_mode = 2
+text = "------------------------------------------------------"
